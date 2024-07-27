@@ -9,11 +9,11 @@ basic.forever(function () {
     PingUnit.Centimeters
     ) < 5) {
         if (cuteBot.tracking(cuteBot.TrackingState.L_R_line)) {
-            cuteBot.motors(65, 70)
+            cuteBot.motors(30, 30)
         } else if (cuteBot.tracking(cuteBot.TrackingState.L_unline_R_line)) {
-            cuteBot.motors(25, -25)
+            cuteBot.motors(30, -27)
         } else if (cuteBot.tracking(cuteBot.TrackingState.L_line_R_unline)) {
-            cuteBot.motors(-25, 25)
+            cuteBot.motors(-27, 30)
         } else {
             cuteBot.motors(-30, -30)
         }
@@ -28,12 +28,12 @@ basic.forever(function () {
         DigitalPin.P12,
         PingUnit.Centimeters
         ) >= 5) {
-            cuteBot.motors(100, -40)
-            basic.pause(200)
+            cuteBot.motors(-40, 100)
+            basic.pause(150)
             while (!(cuteBot.tracking(cuteBot.TrackingState.L_R_line))) {
-                cuteBot.motors(20, 100)
+                cuteBot.motors(100, 20)
             }
-            cuteBot.motors(100, -50)
+            cuteBot.motors(-50, 100)
             basic.pause(200)
         }
     }
