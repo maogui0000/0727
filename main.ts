@@ -31,7 +31,7 @@ basic.forever(function () {
             cuteBot.motors(100, -40)
             basic.pause(200)
             while (!(cuteBot.tracking(cuteBot.TrackingState.L_R_line))) {
-                cuteBot.motors(10, 90)
+                cuteBot.motors(20, 100)
             }
             cuteBot.motors(100, -50)
             basic.pause(200)
